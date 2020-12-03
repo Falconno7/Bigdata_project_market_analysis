@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Analysis</title>
+    <script>
+        function check(){
+            form1.submit()
+        }
+    </script>
+</head>
+<body>
+    <form action="/modeling" method="POST" name="form1">
+    <table border="0" align="center">
+    <tr>
+        <th>이름</th>
+        <td><input type="text" name="name"></td>
+    </tr>
+    
+    <tr>
+        <th>연령</th>
+        <td><input type="text" name="data0"></td>
+    </tr>
+
+    <tr>
+        <th>성별</th>
+        <td>
+	<input type="text" name="data1" >
+       </td>
+    </tr>
+
+    <tr>
+        <th>배송서비스 신청 여부 y/n</th>
+        <td>
+	<input type="text" name="data2">
+       </td>
+    </tr>
+
+    <tr>
+        <th>모바일 알림여부 y/n</th>
+        <td>
+	<input type="text" name="data3">
+    </td>
+    </tr>    
+
+    <tr>
+        <th>지역(구)</th>
+        <td><input type="text" name="data4"></td>
+    </tr>    
+    
+    <tr>
+        <th>주당 구매액</th>
+        <td><input type="text" name="data5"></td>
+    </tr>
+
+
+    <tr>
+        <td colspan="2">
+        <input id="submit_btn" type="button" value="입력" onclick="check()">                    
+        <input type="reset" value="취소">
+    </tr>
+    </form>
+
+    <h3  border="0" align="center" > Model 예측 결과 {{predict}} </h3>
+    <a href="/" align="center" > Main Page </a>
+
+</body>
+</html>
