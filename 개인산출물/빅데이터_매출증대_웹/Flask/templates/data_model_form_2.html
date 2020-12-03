@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Analysis</title>
+    <script>
+        function check(){
+            form2.submit()
+        }
+    </script>
+</head>
+<body>
+    <form action="/modeling2" method="POST" name="form2">
+    <table border="0" align="center">
+    <tr>
+        <th>품 목</th>
+        <td><input type="text" name="name"></td>
+    </tr>
+    
+    <tr>
+        <th>날짜 (yyyy-mm-dd)</th>
+        <td><input type="text" name="date"></td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+        <input id="submit_btn" type="button" value="입력" onclick="check()">                    
+        <input type="reset" value="취소">
+    </tr>
+    </form>
+
+    <h3  border="0" align="center" > Model 예측 결과 {{predict}} </h3>
+    <a href="/" align="center" > Main Page </a>
+
+</body>
+</html>
